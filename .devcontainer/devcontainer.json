@@ -9,7 +9,6 @@
     "containerEnv": {
         "IDF_CCACHE_ENABLE": "1"
     },
-    "postCreateCommand": "apt update && apt install clang-format -y",
     "settings": {
         "idf.espIdfPath": "/opt/esp/idf",
         "idf.toolsPath": "/opt/esp",

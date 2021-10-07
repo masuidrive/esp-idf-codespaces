@@ -6,11 +6,12 @@
    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
    CONDITIONS OF ANY KIND, either express or implied.
 */
+#include <stdio.h>
+
 #include "driver/gpio.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "sdkconfig.h"
-#include <stdio.h>
 
 /* Can use project configuration menu (idf.py menuconfig) to choose the GPIO to
    blink, or you can edit the following line and set a number here.
@@ -19,11 +20,11 @@
 
 void app_main(void) {
   /* Configure the IOMUX register for pad BLINK_GPIO (some pads are
-   muxed to GPIO on reset already, but some default to other
-   functions and need to be switched to GPIO. Consult the
-   Technical Reference for a list of pads and their default
-   functions.)
-*/
+     muxed to GPIO on reset already, but some default to other
+     functions and need to be switched to GPIO. Consult the
+     Technical Reference for a list of pads and their default
+     functions.)
+  */
   gpio_reset_pin(BLINK_GPIO);
 
   /* Set the GPIO as a push/pull output */
