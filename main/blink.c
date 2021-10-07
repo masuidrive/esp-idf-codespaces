@@ -30,9 +30,6 @@ void app_main(void) {
   gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
 
   while (1) {
-    if (1) {
-      printf("Turning off the LED\n");
-    }
     /* Blink off (output low) */
     printf("Turning off the LED\n");
     gpio_set_level(BLINK_GPIO, 0);
