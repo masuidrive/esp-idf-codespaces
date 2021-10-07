@@ -6,6 +6,9 @@
         "espressif.esp-idf-extension",
         "masuidrive.vsc-esp-updater"
     ],
+    "forwardPorts": [
+        3232
+    ],
     "containerEnv": {
         "IDF_CCACHE_ENABLE": "1"
     },
