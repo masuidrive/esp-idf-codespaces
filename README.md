@@ -2,7 +2,7 @@
 
 <a href="https://youtu.be/md5ci_08o1E">
   <p align="center">
-    <img src="./media/espidf-preview.jpg" alt="ESP-IDF developing environment on Github Codespaces" width="1024" height="782">
+    <img src="./media/espidf-preview.jpg" alt="ESP-IDF developing environment on Github Codespaces" width="1024">
   </p>
 </a>
 
