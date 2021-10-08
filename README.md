@@ -10,3 +10,5 @@
 - Install [Espressif IDF](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension) and [ESP Updater extension](https://marketplace.visualstudio.com/items?itemName=masuidrive.vsc-esp-updater) for Codespaces and VS Code Rmote
 - Configured [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
 - License: [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) / Public Domain
+
+If you run it on Github Codespaces, you need to sign up to [Codespaces](http://github.com/codespaces) first.
