@@ -8,6 +8,7 @@
 
 - Configured ESP-IDF environment
 - Install [Espressif IDF](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension) and [ESP Updater extension](https://marketplace.visualstudio.com/items?itemName=masuidrive.vsc-esp-updater) for Codespaces and VS Code Rmote
+  - ESP Updater extension required Google Chrome on Windows / macOS
 - Configured [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
 - License: [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) / Public Domain
 
