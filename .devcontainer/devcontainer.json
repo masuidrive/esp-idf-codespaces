@@ -1,12 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/microsoft/vscode/master/extensions/configuration-editing/schemas/devContainer.schema.json",
     "name": "ESP-IDF project",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "args": {
-            "IDF_VERSION": "release-v4.3"
-        }
-    },
+    "image": "espressif/idf:release-v4.3",
     "extensions": [
         "ms-vscode.cpptools",
         "espressif.esp-idf-extension",
@@ -19,6 +14,11 @@
         "IDF_CCACHE_ENABLE": "1"
     },
     "settings": {
+        "idf.espIdfPath": "/opt/esp/idf",
+        "idf.toolsPath": "/opt/esp",
+        "idf.pythonBinPath": "/opt/esp/python_env/idf4.3_py3.6_env/bin/python",
+        "idf.customExtraPaths": "/opt/esp/idf/components/esptool_py/esptool:/opt/esp/idf/components/espcoredump:/opt/esp/idf/components/partition_table:/opt/esp/idf/components/app_update:/opt/esp/tools/xtensa-esp32-elf/esp-2021r1-8.4.0/xtensa-esp32-elf/bin:/opt/esp/tools/xtensa-esp32s2-elf/esp-2021r1-8.4.0/xtensa-esp32s2-elf/bin:/opt/esp/tools/xtensa-esp32s3-elf/esp-2021r1-8.4.0/xtensa-esp32s3-elf/bin:/opt/esp/tools/riscv32-esp-elf/esp-2021r1-8.4.0/riscv32-esp-elf/bin:/opt/esp/tools/esp32ulp-elf/2.28.51-esp-20191205/esp32ulp-elf-binutils/bin:/opt/esp/tools/esp32s2ulp-elf/2.28.51-esp-20191205/esp32s2ulp-elf-binutils/bin:/opt/esp/tools/cmake/3.16.4/bin:/opt/esp/tools/openocd-esp32/v0.10.0-esp32-20210401/openocd-esp32/bin:/opt/esp/python_env/idf4.3_py3.6_env/bin:/opt/esp/idf/tools",
+        "idf.saveScope": 2,
         "clang-format.executable": "/usr/bin/clang-format",
         "[cpp]": {
             "editor.defaultFormatter": "ms-vscode.cpptools"
