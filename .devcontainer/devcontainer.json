@@ -8,8 +8,8 @@
         }
     },
     "extensions": [
-        "espressif.esp-idf-extension",
         "ms-vscode.cpptools",
+        "espressif.esp-idf-extension",
         "masuidrive.vsc-esp-updater"
     ],
     "forwardPorts": [
