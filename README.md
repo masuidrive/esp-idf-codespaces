@@ -6,7 +6,7 @@
   </p>
 </a>
 
-- Configured ESP-IDF environment
+- Configured ESP-IDF and ESP-ADF environment
 - Install [Espressif IDF](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension) and [ESP Updater extension](https://marketplace.visualstudio.com/items?itemName=masuidrive.vsc-esp-updater) for Codespaces and VS Code Rmote
   - ESP Updater extension required Google Chrome on Windows / macOS
 - Configured [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)

@@ -1,34 +1,42 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/ubuntu
 {
-    "$schema": "https://raw.githubusercontent.com/microsoft/vscode/master/extensions/configuration-editing/schemas/devContainer.schema.json",
-    "name": "ESP-IDF project",
-    "image": "espressif/idf:release-v4.3",
-    "extensions": [
-        "espressif.esp-idf-extension",
-        "masuidrive.vsc-esp-updater"
-    ],
-    "forwardPorts": [
-        3232
-    ],
-    "containerEnv": {
-        "IDF_CCACHE_ENABLE": "1"
-    },
-    "settings": {
-        "idf.espIdfPath": "/opt/esp/idf",
-        "idf.toolsPath": "/opt/esp",
-        "idf.pythonBinPath": "/opt/esp/python_env/idf4.3_py3.6_env/bin/python",
-        "idf.customExtraPaths": "/opt/esp/idf/components/esptool_py/esptool:/opt/esp/idf/components/espcoredump:/opt/esp/idf/components/partition_table:/opt/esp/idf/components/app_update:/opt/esp/tools/xtensa-esp32-elf/esp-2021r1-8.4.0/xtensa-esp32-elf/bin:/opt/esp/tools/xtensa-esp32s2-elf/esp-2021r1-8.4.0/xtensa-esp32s2-elf/bin:/opt/esp/tools/xtensa-esp32s3-elf/esp-2021r1-8.4.0/xtensa-esp32s3-elf/bin:/opt/esp/tools/riscv32-esp-elf/esp-2021r1-8.4.0/riscv32-esp-elf/bin:/opt/esp/tools/esp32ulp-elf/2.28.51-esp-20191205/esp32ulp-elf-binutils/bin:/opt/esp/tools/esp32s2ulp-elf/2.28.51-esp-20191205/esp32s2ulp-elf-binutils/bin:/opt/esp/tools/cmake/3.16.4/bin:/opt/esp/tools/openocd-esp32/v0.10.0-esp32-20210401/openocd-esp32/bin:/opt/esp/python_env/idf4.3_py3.6_env/bin:/opt/esp/idf/tools",
-        "idf.customExtraVars": "{\"OPENOCD_SCRIPTS\":\"/opt/esp/tools/openocd-esp32/v0.10.0-esp32-20191114/openocd-esp32/share/openocd/scripts\"}",
-        "idf.saveScope": 2,
-        "clang-format.executable": "/usr/bin/clang-format",
-        "[cpp]": {
-            "editor.defaultFormatter": "ms-vscode.cpptools"
-        },
-        "[c]": {
-            "editor.defaultFormatter": "ms-vscode.cpptools"
-        },
-        "files.associations": {
-            "*.h": "cpp"
-        },
-        "editor.formatOnSave": true
-    }
-}
+	"name": "ESP-IDF & ESP-ADF environment",
+	"build": {
+	  "dockerfile": "Dockerfile"
+	},
+	"forwardPorts": [3232],
+	"containerEnv": {
+	  "IDF_PATH": "/opt/esp/idf",
+	  "IDF_TOOLS_PATH": "/opt/esp",
+	  "ADF_PATH": "/opt/esp/esp-adf"
+	},
+	"customizations": {
+	  "vscode": {
+		"settings": {
+		  "terminal.integrated.defaultProfile.linux": "bash",
+		  "idf.espIdfPath": "/opt/esp/idf",
+		  "idf.pythonBinPath": "/opt/esp/python_env/idf5.2_py3.10_env/bin/python",
+		  "idf.toolsPath": "/opt/esp",
+		  "idf.customExtraPaths": "/opt/esp/tools/xtensa-esp-elf-gdb/12.1_20221002/xtensa-esp-elf-gdb/bin:/opt/esp/tools/riscv32-esp-elf-gdb/12.1_20221002/riscv32-esp-elf-gdb/bin:/opt/esp/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin:/opt/esp/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin:/opt/esp/tools/esp32ulp-elf/2.35_20220830/esp32ulp-elf/bin:/opt/esp/tools/openocd-esp32/v0.12.0-esp32-20230921/openocd-esp32/bin:/opt/esp/tools/esp-rom-elfs/20230320",
+		  "idf.customExtraVars": {
+			"OPENOCD_SCRIPTS": "/opt/esp/tools/openocd-esp32/v0.12.0-esp32-20230921/openocd-esp32/share/openocd/scripts",
+			"ESP_ROM_ELF_DIR": "/opt/esp/tools/esp-rom-elfs/20230320/"
+		  },
+		  "idf.gitPath": "/usr/bin/git",
+		  "clang-format.executable": "/usr/bin/clang-format",
+		  "C_Cpp.formatting": "clangFormat",
+		  "editor.formatOnSave": true
+		},
+		"extensions": [
+		  "ms-vscode.cpptools",
+		  "ms-vscode.cpptools-extension-pack",
+		  "masuidrive.vsc-esp-updater",
+		  "espressif.esp-idf-extension",
+		  "mutantdino.resourcemonitor"
+		]
+	  }
+	},
+	"runArgs": ["--privileged"]
+  }
+  
